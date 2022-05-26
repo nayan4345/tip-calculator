@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+$dark: #001219;
+$light: #ffffff;
+$white: #f7f7f7;
+$primary: #191919;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    line-height: 1.6em;
+    background: $white;
+}
+
+.container {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 700px;
+    background-color: $light;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.07);
+    display: flex;
+    transform: scale(1.2);
+
+    .calculator__controls {
+        flex: 1;
+        padding: 1.2rem 2rem;
+        .calculator__input {
+            p {
+                color: rgba(0, 0, 0, 0.7);
+                font-weight: 600;
+                font-size: 0.75rem;
+            }
+            input {
+                padding: 0.6rem 1rem;
+                width: 100%;
+                border: 2px solid rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                background: #f5f5f5;
+                &:active {
+                    border: 2px solid rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+        .calculator__preset-value {
+            margin-top: 1.2rem;
+            p {
+                color: rgba(0, 0, 0, 0.7);
+                font-weight: 600;
+                font-size: 0.75rem;
+            }
+            ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                li {
+                    margin: 0.3rem 0.3rem;
+                    width: 6rem;
+                    height: 2.1rem;
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                    color: $light;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $dark;
+                    opacity: 0.6;
+                    border: 1px solid rgba(0, 0, 0, 0.7);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    user-select: none;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                    &:active {
+                        transform: scale(0.9);
+                    }
+                }
+                .active {
+                    color: $light;
+                    background: $dark;
+                    border: none;
+                    opacity: 1;
+                }
+            }
+        }
+        .calculator__share-input {
+            margin-top: 1.2rem;
+            p {
+                color: rgba(0, 0, 0, 0.7);
+                font-weight: 600;
+                font-size: 0.75rem;
+            }
+            input {
+                padding: 0.6rem 1rem;
+                width: 100%;
+                border: 2px solid rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                background: #f5f5f5;
+                &:active {
+                    border: 2px solid rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+    }
+    .calculator__display {
+        flex: 1;
+        background: $primary;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .calculator__tip-amount {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            .tip-text {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $light;
+                opacity: 0.8;
+            }
+            .tip-value {
+                font-size: 2rem;
+                color: $light;
+                font-weight: 700;
+            }
+        }
+        .calculator__total-bill {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            .tip-text {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $light;
+                opacity: 0.8;
+            }
+            .tip-value {
+                font-size: 2rem;
+                color: $light;
+                font-weight: 700;
+            }
+        }
+        .calculator__share-amount {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            .tip-text {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $light;
+                opacity: 0.8;
+            }
+            .tip-value {
+                font-size: 2rem;
+                color: $light;
+                font-weight: 700;
+            }
+        }
+        .calculator__calculate {
+            border: none;
+            padding: 0.8rem 2rem;
+            background: $light;
+            color: $dark;
+            border-radius: 15px;
+            font-weight: 800;
+            display: block;
+            cursor: pointer;
+            transition: 0.3s ease all;
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+}

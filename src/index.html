@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <script src="./js/app.js" defer></script>
+        <title>Tip Calculator</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <!-- ? Calculator Controls  -->
+                <div class="calculator__controls">
+                    <!-- Calculator Input -->
+                    <div class="calculator__input">
+                        <p>Bill</p>
+                        <input
+                            type="number"
+                            placeholder="$"
+                            id="bill-input"
+                            min="0"
+                            max="100000"
+                        />
+                    </div>
+                    <!-- Calculator Preset Values -->
+                    <div class="calculator__preset-value">
+                        <p>Select Tip %</p>
+                        <ul id="tip-percents">
+                            <li data-amount="5" id="tip-percent-5">5%</li>
+                            <li data-amount="10" id="tip-percent-10">10%</li>
+                            <li data-amount="15" id="tip-percent-15">15%</li>
+                            <li data-amount="20" id="tip-percent-20">20%</li>
+                            <li data-amount="25" id="tip-percent-25">25%</li>
+                            <li>custom</li>
+                        </ul>
+                    </div>
+                    <!-- Calculator Shared Input -->
+                    <div class="calculator__share-input">
+                        <p>Number of People</p>
+                        <input
+                            type="number"
+                            placeholder="#"
+                            id="share-input"
+                            min="0"
+                            max="100"
+                        />
+                    </div>
+                </div>
+                <!-- ? Calculator Display -->
+                <div class="calculator__display">
+                    <!-- Calculator Tip Amount -->
+                    <div class="calculator__tip-amount">
+                        <p class="tip-text">Tip Amount</p>
+                        <p class="tip-value" id="tip-value">$0.00</p>
+                    </div>
+                    <!-- Calculator Total Bill -->
+                    <div class="calculator__total-bill">
+                        <p class="tip-text">Total Bill</p>
+                        <p class="tip-value" id="bill-value">$0.00</p>
+                    </div>
+                    <!-- Calculator Share Amount -->
+                    <div class="calculator__share-amount">
+                        <p class="tip-text">Shared Amount</p>
+                        <p class="tip-value" id="shared-value">$0.00</p>
+                    </div>
+                    <button class="calculator__calculate" id="calculate">
+                        Calculate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
